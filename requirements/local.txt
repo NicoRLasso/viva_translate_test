@@ -2,7 +2,7 @@ pytz==2022.7.1  # https://github.com/stub42/pytz
 
 # Django
 # ------------------------------------------------------------------------------
-django==4.0.9  # pyup: < 4.1  # https://www.djangoproject.com/
+django==4.0.9  # https://www.djangoproject.com/
 django-environ==0.9.0  # https://github.com/joke2k/django-environ
 # Django REST Framework
 djangorestframework==3.14.0  # https://github.com/encode/django-rest-framework
@@ -15,3 +15,5 @@ psycopg2==2.9.5  # https://github.com/psycopg/psycopg2
 flake8==6.0.0  # https://github.com/PyCQA/flake8
 flake8-isort==6.0.0  # https://github.com/gforcada/flake8-isort
 pylint-django==2.5.3  # https://github.com/PyCQA/pylint-django
+django-filter==22.1  # https://github.com/carltongibson/django-filter
+django-countries==7.5.1 # https://github.com/SmileyChris/django-countries/

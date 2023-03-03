@@ -13,7 +13,11 @@ docker-compose build
 
 for running the migrations
 '''
-docker-compose run django run --rm django python manage.py migrate
+docker-compose run --rm django python manage.py migrate
+'''
+for create a SuperUSer
+'''
+docker-compose run --rm django python manage.py createsuperuser --email admin@example.com --username admin
 '''
 
 for start the solution 
