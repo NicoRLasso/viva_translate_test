@@ -19,5 +19,5 @@ class Participants(models.Model):
     birthdate = models.DateField()
     country = CountryField()
 
-    class Meta:
-        ordering = ['created']
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"

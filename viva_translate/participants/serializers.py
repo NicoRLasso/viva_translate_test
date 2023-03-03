@@ -2,7 +2,7 @@ from rest_framework import serializers
 from viva_translate.participants.models import Participants
 from django_countries.serializer_fields import CountryField
 
-class UserSerializer(serializers.ModelSerializer):
+class ParticipantSerializer(serializers.ModelSerializer):
     country = CountryField()
 
     class Meta:
