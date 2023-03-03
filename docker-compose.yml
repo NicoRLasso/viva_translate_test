@@ -1,0 +1,35 @@
+version: '3'
+
+volumes:
+  viva_translate_postgres_data: {}
+  viva_translate_postgres_data_backups: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/django/Dockerfile
+    image: viva_translate_django
+    container_name: viva_translate_django
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.django
+      - ./.envs/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/postgres/Dockerfile
+    image: viva_translate_production_postgres
+    container_name: viva_translate_postgres
+    volumes:
+      - viva_translate_postgres_data:/var/lib/postgresql/data
+      - viva_translate_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.postgres
