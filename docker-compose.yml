@@ -26,7 +26,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/postgres/Dockerfile
-    image: viva_translate_production_postgres
+    image: viva_translate_postgres
     container_name: viva_translate_postgres
     volumes:
       - viva_translate_postgres_data:/var/lib/postgresql/data

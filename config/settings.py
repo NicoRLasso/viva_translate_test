@@ -81,7 +81,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "drf_spectacular",
     "django_countries",
-    "viva_translate.participants"
+    "viva_translate.participants",
+    "viva_translate.teams"
 ]
 
 MIGRATION_MODULES = {"sites": "viva_translate.contrib.sites.migrations"}
