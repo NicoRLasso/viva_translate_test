@@ -1,15 +1,15 @@
-# from django.conf import settings
-# from rest_framework.routers import DefaultRouter, SimpleRouter
+from django.conf import settings
+from rest_framework.routers import DefaultRouter, SimpleRouter
 
-# # from viva_translate.users.api.views import UserViewSet
+from viva_translate.participants.views import UserViewSet
 
-# # if settings.DEBUG:
-# #     router = DefaultRouter()
-# # else:
-# #     router = SimpleRouter()
+if settings.DEBUG:
+    router = DefaultRouter()
+else:
+    router = SimpleRouter()
 
-# # router.register("users", UserViewSet)
+router.register("participant", UserViewSet)
 
 
-# app_name = "api"
-# urlpatterns = router.urls
+app_name = "api"
+urlpatterns = router.urls

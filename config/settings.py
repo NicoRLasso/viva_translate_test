@@ -80,6 +80,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "drf_spectacular",
+    "django_countries",
+    "viva_translate.participants"
 ]
 
 MIGRATION_MODULES = {"sites": "viva_translate.contrib.sites.migrations"}
@@ -159,6 +161,8 @@ MANAGERS = ADMINS
 # -------------------------------------------------------------------------------
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 CORS_URLS_REGEX = r"^/api/.*$"
